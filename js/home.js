@@ -1,15 +1,15 @@
 const productContainers = [...document.querySelectorAll('.product-container')];
-const nxtBtn = [...document.querySelectorall('nxt-btn')];
-const preBtn = [...document.querySelectorall('pre-btn')];
+const nxtBtn = [...document.querySelectorAll('.nxt-btn')];
+const preBtn = [...document.querySelectorAll('.pre-btn')];
 
 productContainers.forEach((item, i)=>{
-    let containerdimensions = item.getBoundingClientRect();
-    let containerWidth = containerdimensions.width;
+    let containerDimensions = item.getBoundingClientRect();
+    let containerWidth = containerDimensions.width;
 
-    nxtBtn[i].addeventListener('click', ()=>{
+    nxtBtn[i].addEventListener('click', ()=>{
         item.scrollLeft += containerWidth;
     })
-    preBtn[i].addeventListener('click', ()=>{
+    preBtn[i].addEventListener('click', ()=>{
         item.scrollLeft -= containerWidth;
     })
 })
